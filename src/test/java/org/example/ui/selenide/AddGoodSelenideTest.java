@@ -3,6 +3,7 @@ package org.example.ui.selenide;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.example.config.ConfigProvider;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -15,9 +16,12 @@ class AddGoodSelenideTest {
 
     @BeforeAll
     static void setUp() {
+        ConfigProvider.printConfig();
+
         Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "http://localhost:8080";
+        Configuration.baseUrl = ConfigProvider.CONFIG.baseUrl();
+        Configuration.timeout = ConfigProvider.CONFIG.elementTimeout();
     }
 
     @Test

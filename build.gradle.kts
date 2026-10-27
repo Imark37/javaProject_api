@@ -18,6 +18,7 @@ dependencies {
     testImplementation("org.seleniumhq.selenium:selenium-java:4.27.0")
     testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2")
     testImplementation("com.codeborne:selenide:7.6.1")
+    testImplementation("org.aeonbits.owner:owner:1.0.12")
 }
 
 tasks.test {
