@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("io.qameta.allure") version "3.0.0"
 }
 
 group = "org.example"
@@ -19,6 +20,9 @@ dependencies {
     testImplementation("io.github.bonigarcia:webdrivermanager:5.9.2")
     testImplementation("com.codeborne:selenide:7.6.1")
     testImplementation("org.aeonbits.owner:owner:1.0.12")
+    testImplementation("io.qameta.allure:allure-selenide:2.27.0")
+    testImplementation("io.qameta.allure:allure-rest-assured:2.27.0")
+    testImplementation("io.qameta.allure:allure-junit5:2.27.0")
 }
 
 tasks.test {
